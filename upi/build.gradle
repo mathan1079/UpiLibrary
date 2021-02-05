@@ -1,7 +1,16 @@
 plugins {
     id 'com.android.library'
+    id 'maven-publish'
 }
 
+repositories {
+    mavenCentral()
+    google()
+    jcenter()
+    maven { url "https://jitpack.io" }
+}
+group = 'com.mathan1079'
+version = '1.0'
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
@@ -35,4 +44,17 @@ dependencies {
     testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.mathan1079'
+                artifactId = 'upi'
+                version = '1.0'
+            }
+        }
+    }
 }
