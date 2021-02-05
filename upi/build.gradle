@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'maven-publish'
+    id 'com.github.dcendents.android-maven'
 }
 
 repositories {
@@ -9,7 +10,7 @@ repositories {
     jcenter()
     maven { url "https://jitpack.io" }
 }
-group = 'com.mathan1079'
+group = 'com.github.mathan1079'
 version = '1.0'
 android {
     compileSdkVersion 30
