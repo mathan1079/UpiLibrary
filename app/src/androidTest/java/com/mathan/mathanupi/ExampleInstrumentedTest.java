@@ -1,4 +1,4 @@
-package com.mathan.upilibrary;
+package com.mathan.mathanupi;
 
 import android.content.Context;
 
