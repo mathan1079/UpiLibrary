@@ -52,7 +52,7 @@ afterEvaluate {
             release(MavenPublication) {
                 from components.release
                 groupId = 'com.mathan1079'
-                artifactId = 'upi'
+                artifactId = 'upilib'
                 version = '1.0'
             }
         }
